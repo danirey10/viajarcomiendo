@@ -1,0 +1,21 @@
+<div #detectScroll (scroll)="onScroll($event)">
+
+<header-component [hasScroll]="sticky" />
+
+<div class="topini">
+  <div *ngIf="inicio()">
+    <div>
+      <search-input (tagInput2)="metodoRecupera($event)" />
+    </div>
+  </div>
+</div>
+
+
+<router-outlet />
+
+
+<footer-component />
+
+<cookies />
+
+</div>

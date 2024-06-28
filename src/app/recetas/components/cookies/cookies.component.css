@@ -1,0 +1,29 @@
+.cookies {
+    position: fixed;
+    bottom: 20px;
+    width: 100%;
+    max-width: 1024px;
+    right: 0;
+    left: 0;
+    margin: 0 auto;
+    background-color: #111;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 30px;
+    border-radius: 10px;
+    z-index: 999;
+}
+.cookies button {  
+    background-color: yellow;
+    color: #000;
+    font-weight: 700;
+    border: 0;
+    padding: 10px 20px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+.cookies.ok {
+    display: none;
+}

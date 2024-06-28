@@ -1,0 +1,22 @@
+
+<div class="list">
+  <h3>Descubre una nueva manera de disfrutar de la cocina</h3>
+
+  <div class="content">
+
+  <card-receta *ngFor="let result of resultado?.results" [result]="result" [favorita]="isFavorite(result.id)" />
+
+  </div>
+  <div class="contentbt">
+    <div class="botones">
+      <button (click)="prev()"><i class="fa-solid fa-chevron-left"></i> <span>Anterior</span></button>
+      <button (click)="next()"><span>Siguiente</span> <i class="fa-solid fa-chevron-right"></i></button>
+    </div>
+    <div class="resultados">
+      {{ resultado.totalResults }} resultados <br>
+      {{ paginas }} páginas <br>
+      Ir a la página... <input type="text"  placeholder="0" (keyup.enter)="goToPage()" #txtTagInput>
+    </div>
+  </div>
+
+</div>

@@ -1,0 +1,52 @@
+<div class="container">
+
+<form class="formregister"
+      [formGroup]="myForm"
+      (ngSubmit)="register()"
+      autocomplete="off">
+
+    <span class="title">
+        Crea tu cuenta
+    </span>
+
+    <p>Bienvenido <strong>{{ name }}</strong>, regístrate y disfruta de una experiencia completa.</p>
+
+    <div class="checkbox">
+      <span>Nombre</span>
+      <input type="text"
+             placeholder="Nombre de usuario"
+             formControlName="name"
+             (keyup)="thisName()">
+      <span class=""></span>
+  </div>
+
+    <div class="checkbox">
+        <span>Correo</span>
+        <input type="email"
+               placeholder="Correo electrónico"
+               formControlName="email">
+        <span class=""></span>
+    </div>
+
+    <div class="checkbox">
+      <span>Contraseña</span>
+      <input type="password"
+             placeholder="Ingrese su contraseña"
+             formControlName="password">
+      <span class=""></span>
+  </div>
+
+
+    <div class="btlogin">
+
+      <div class="btentrar">
+        <button type="submit"
+                [disabled]="myForm.invalid"
+                >
+            <span>Registrar</span>
+        </button>
+      </div>
+
+    </div>
+</form>
+</div>

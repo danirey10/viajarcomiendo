@@ -1,0 +1,53 @@
+<div class="content">
+<h1>Prepárate para viajar comiendo</h1>
+
+<div class="selectores">
+  <img src="{{imgViaje}}" alt="Viajar comiendo">
+  <div>
+    <h2>Por región</h2>
+    <select [(ngModel)]="busqReg" (change)="search(busqReg)">
+        <option [selected]="busqReg" disabled hidden>Escoge una región</option>
+        <option value='african'>Africana</option>
+        <option value='american'>Americana</option>
+        <option value='asian'>Asiática</option>
+        <option value='eastern european'>Europa del Este</option>
+        <option value='european'>Europea</option>
+        <option value='latin american'>Latina americana</option>
+        <option value='mediterranean'>Mediterránea</option>
+        <option value='middle eastern'>Oriente medio</option>
+        <option value='nordic'>Nórdica</option>
+        <option value='southern'>Meridional</option>
+    </select>
+  </div>
+  <div>
+    <h2>Por país</h2>
+    <select [(ngModel)]="busqPais" (change)="search(busqPais)">
+      <option [selected]="'busqPais'" disabled hidden>Escoge un país</option>
+        <option value='british'>Británica</option>
+        <option value='cajun'>Cajun</option>
+        <option value='caribbean'>Caribeña</option>
+        <option value='chinese'>China</option>
+        <option value='french'>Francesa</option>
+        <option value='german'>Alemana</option>
+        <option value='greek'>Griega</option>
+        <option value='indian'>India</option>
+        <option value='irish'>Irlandesa</option>
+        <option value='italian'>Italiana</option>
+        <option value='japanese'>Japanesa</option>
+        <option value='jewish'>Judía</option>
+        <option value='korean'>Coreana</option>
+        <option value='mexican'>Mexicana</option>
+        <option value='spanish'>Española</option>
+        <option value='thai'>Thai</option>
+        <option value='vietnamese'>Vietnamita</option>
+    </select>
+  </div>
+
+</div>
+
+<mapamundi class="mapamundi" />
+
+
+
+
+</div>

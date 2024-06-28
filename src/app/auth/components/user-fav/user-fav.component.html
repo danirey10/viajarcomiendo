@@ -1,0 +1,12 @@
+<div class="userfav">
+  <div class="img">
+    <img src="{{ receta?.image }}" alt="{{ receta?.title }}">
+  </div>
+  <div class="info">
+    <h3>{{ receta?.title }}</h3>
+    <p>{{ receta?.instructions }}</p>
+    <button (click)="goReceta(receta!.title,receta!.id)"><div><i class="fa-solid fa-utensils"></i> <span>Ver receta</span></div></button>
+  </div>
+  <button class="trash" (click)="deleteReceta(receta!.id)"><i class="fa-solid fa-trash"></i></button>
+</div>
+

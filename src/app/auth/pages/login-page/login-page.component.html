@@ -1,0 +1,49 @@
+<div class="container">
+<form class="formlogin"
+      [formGroup]="myForm"
+      (ngSubmit)="login()"
+      autocomplete="off">
+
+    <span class="title">
+        Inicia sesión con tu cuenta
+    </span>
+
+    <div class="checkbox">
+        <span>Correo</span>
+        <input type="email"
+               placeholder="Correo electrónico"
+               formControlName="email">
+        <span class=""></span>
+    </div>
+
+    <div class="checkbox">
+        <span>Contraseña</span>
+        <input type="password"
+               placeholder="Ingrese su contraseña"
+               formControlName="password">
+        <span class=""></span>
+    </div>
+
+    <div class="btlogin">
+
+    <div class="btentrar">
+      <button type="submit"
+              [disabled]="myForm.invalid"
+              >
+          <span>Login</span>
+      </button>
+    </div>
+
+    <div class="noaccount">
+        <span>
+            ¿No tienes cuenta?
+        </span>
+        &nbsp;
+        <a routerLink="/auth/register">
+            Regístrate
+        </a>
+    </div>
+
+    </div>
+</form>
+</div>

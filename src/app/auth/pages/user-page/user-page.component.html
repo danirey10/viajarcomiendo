@@ -1,0 +1,87 @@
+
+
+<div class="content">
+  <div>
+    <h1>Bienvenido a tu panel de usuario, <strong>{{ user()?.name }}</strong>.</h1>
+    <p>Aquí podrás modificar tu imagen o tu nombre de usuario, además podrás ver las recetas que tienes guardadas en favoritos.</p>
+
+    <div class="user">
+      <div class="imgcont">
+        <div class="img">
+          <img [src]="getImage()" alt="Imagen del usuario">
+        </div>
+        <div>
+          <form
+          [formGroup]="myForm"
+          (ngSubmit)="onUploadImg()"
+          autocomplete="off">
+
+            <input formControlName="img" type="file" (change)="onChange($event)">
+
+            <button type="submit" [disabled]="myForm.invalid">
+              <span>Upload</span>
+            </button>
+
+          </form>
+        </div>
+      </div>
+      <div class="datos">
+        <p>Puedes cambiar el nombre de usuario en cualquier momento:</p>
+        <form
+        [formGroup]="myFormUser"
+        (ngSubmit)="onUploadText()"
+        autocomplete="off">
+
+          <input type="text"
+          placeholder="Nuevo nombre"
+          formControlName="name">
+
+          <button type="submit" [disabled]="myFormUser.invalid">
+            <span><i class="fa-solid fa-arrows-rotate"></i></span>
+          </button>
+
+        </form>
+
+      </div>
+      <div class="datos">
+        <p>También puedes cambiar la contraseña:</p>
+        <form
+        [formGroup]="myFormPass"
+        (ngSubmit)="changePassword()"
+        autocomplete="off">
+
+        <input type="password"
+        placeholder="Contraseña actual"
+        formControlName="passactual"
+        style="display:block; margin: 1px auto;">
+
+          <input type="password"
+          placeholder="Nueva contraseña"
+          formControlName="password">
+
+          <input type="password"
+          placeholder="Repite la contraseña"
+          formControlName="password2">
+
+          <button type="submit" [disabled]="myFormPass.invalid">
+            <span><i class="fa-solid fa-arrows-rotate"></i></span>
+          </button>
+
+        </form>
+
+      </div>
+    </div>
+    <div class="favoritas" id="favoritas">
+      <h2>Tus recetas favoritas:</h2>
+      <div class="favorita" *ngFor="let favo of user()?.favorites">
+        <div>
+          <user-fav [id]="favo" />
+        </div>
+      </div>
+    </div>
+    <br>
+    <button [routerLink]="'/'"><span>Volver al inicio</span></button>
+
+
+  </div>
+</div>

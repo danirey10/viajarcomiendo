@@ -1,0 +1,46 @@
+footer {
+  background: black;
+  color: #fff;
+  min-height: 220px;
+  padding: 20px;
+  font-size: 14px;
+}
+footer a {
+  color: #fff;
+}
+footer .content {
+  max-width: 1360px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+  margin: 0 auto;
+}
+
+footer .content > div:nth-child(2) {
+  text-align: center;
+  font-size: 10px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  margin-top: 30px;
+}
+
+footer .content > div a {
+  text-decoration: none;
+  cursor: pointer;
+ }
+ footer .content > div a:hover{
+  text-decoration: underline;
+ }
+ @media screen and (min-width:768px){
+  footer .content {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-end;
+  }
+  footer .content > div:nth-child(2) {
+    text-align: right;
+    margin-top: 0;
+  }
+}

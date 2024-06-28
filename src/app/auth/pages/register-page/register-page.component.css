@@ -1,0 +1,113 @@
+.container{
+  width: calc(100% - 40px);
+  max-width: 400px;
+  background-color: #fff;
+  margin: 0 auto;
+  left: 0;
+  right: 0;
+  top: calc(50% - 240px);
+  position: absolute;
+  border-radius: 10px;
+  overflow: hidden;
+  padding-bottom: 30px;
+  border: 2px solid #fff;
+}
+.formregister .title {
+  padding: 14px 20px;
+  font-weight: 500;
+  font-size: 16px;
+  font-style: italic;
+  display: block;
+  color: #fff;
+  margin: 0 0 10px 0;
+  letter-spacing: 0.02em;
+  /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#d60404+0,8c0000+100 */
+  background: linear-gradient(to right,  rgba(214,4,4,1) 0%,rgba(140,0,0,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+}
+.formregister > p {
+  padding: 0 16px;
+}
+.formregister > p strong{
+  font-weight: 700;
+}
+.formregister .checkbox {
+  padding: 20px 20px 0px 20px;
+}
+.formregister .checkbox > span {
+  display: block;
+  font-size: 12px;
+  text-transform: uppercase;
+  font-style: italic;
+  margin-bottom: 6px;
+}
+.formregister .checkbox input {
+  background-color: #ddd;
+  border: 0;
+  width: 100%;
+  padding: 14px;
+  font-size: 18px;
+  font-weight: 300;
+  color: #333;
+  border-radius: 8px;
+}
+
+.formregister .btlogin {
+  padding:10px 20px 0 20px;
+  margin-top: 20px;
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.formregister .btlogin .noaccount {
+  display: inline-block;
+  font-size: 14px;
+  font-style: italic;
+  width: 220px;
+}
+.formregister .btlogin .btentrar{
+  width: calc(100% - 160px);
+}
+.formregister .btlogin .btentrar button {
+  font-size: 16px;
+  width: 100%;
+  padding: 14px;
+  color: #fff;
+  font-weight: 300;
+  letter-spacing: 0.1em;
+  border-radius: 25px;
+  border: 0;
+  margin-bottom: 10px;
+  cursor:pointer;
+  transition: all 0.2s;
+  position: relative;
+  overflow: hidden;
+}
+.formregister .btlogin .btentrar button[disabled]:before{
+  background: #999;
+}
+.formregister .btlogin .btentrar button:hover:before {
+  rotate:180deg;
+  transition: all 0.5s;
+}
+.formregister .btlogin .btentrar button:before {
+  transition: all 0.5s;
+  content:"";
+  position: absolute;
+  top: calc(50% - 150px);
+  left: calc(50% - 150px);
+  width: 300px;
+  height: 300px;
+/* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#45ad0d+0,1f6608+100 */
+background: linear-gradient(to right,  rgba(69,173,13,1) 0%,rgba(31,102,8,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+}
+.formregister .btlogin .btentrar button span {
+  position: relative;
+}
+@media screen and (min-width:980px){
+  .formregister .btlogin .btentrar{
+    width: calc(100% - 220px);
+  }
+}
+

@@ -1,0 +1,49 @@
+<header [ngClass]="{'sticky' : hasScroll}">
+    <div>
+
+      <div class="logo">
+        <a routerLink="/">
+          <img [src]="urlLogo" alt="Logo de ViajarComiendo">
+        </a>
+      </div>
+      <div class="nouser" *ngIf="user()==null">
+        <a href="/auth/login" title="Iniciar sesión">Iniciar sesión</a>
+      </div>
+      <div class="user" *ngIf="user()!=null">
+        <a href="/auth/panel" class="img"><img [src]="getImage()"></a>
+        <div>
+          <div>
+          <a  href="/auth/panel">{{ user()?.name }}</a>
+          <p (click)="logout()"><i class="fa-solid fa-arrow-right-from-bracket"></i></p>
+          </div>
+          <a href="/auth/panel">Ver favoritas</a>
+        </div>
+      </div>
+      <hamburguer (click)="abreNav()" [checked]="checked" />
+    </div>
+</header>
+
+<div class="overlay" (click)="closeNav()"></div>
+  <div class="menubar">
+
+    <div class="nouser" *ngIf="user()==null">
+      <a href="/auth/login" title="Iniciar sesión">Iniciar sesión</a>
+    </div>
+    <div class="user" *ngIf="user()!=null">
+      <a href="/auth/panel" class="img"><img [src]="getImage()"></a>
+      <div>
+        <div>
+          <a  href="/auth/panel">{{ user()?.name }}</a>
+        </div>
+        <a href="/auth/panel">Ver recetas favoritas</a>
+      </div>
+    </div>
+
+    <ul class="menu">
+      <li><a href="/">Inicio</a></li>
+      <li><a *ngIf="user()!=null" href="/auth/panel">Panel de usuario</a></li>
+      <li><a *ngIf="user()!=null" (click)="logout()">Cerrar sesión</a></li>
+    </ul>
+
+  </div>
+

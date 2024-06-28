@@ -1,0 +1,40 @@
+div{
+  position: relative;
+}
+div input {
+  width: 100%;
+  background: #fff;
+  border-radius: 30px;
+  min-width: 300px;
+  padding: 16px 0px 16px 24px;
+  border: 0;
+  box-shadow: 4px 4px 10px 0px rgba(0,0,0,.6);
+  line-height: 8px;
+  font-size: 15px;
+  font-family: 'Libre Franklin';
+  margin: 0px auto 16px auto;
+  height: 50px;
+}
+
+@media screen and (min-width:980px){
+div input {
+    min-width: 460px;
+  }
+}
+
+div button {
+  position: absolute;
+  top: 1px;
+  right: 1px;
+  height: 48px;
+  width: 48px;
+  border-radius: 50%;
+  border: 0;
+  background-color: green;
+  font-size: 16px;
+  color: #fff;
+  cursor: pointer;
+}
+div button:hover{
+  background-color: #006009;
+}

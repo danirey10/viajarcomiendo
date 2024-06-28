@@ -1,0 +1,193 @@
+.content {
+  max-width: 1360px;
+  margin:0 auto;
+  padding: 20px;
+}
+.col {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 30px;
+}
+.col .img {
+  width: 100%;
+  height: 240px;
+  display: block;
+  position: relative;
+  border-radius: 16px;
+  overflow: hidden;
+  margin: 0 0 20px 0;
+}
+.col .img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.col .info {
+  display: flex;
+  width: 100%;
+}
+.col .info > div {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.col .info > div .top .time {
+  color:brown;
+  font-size: 16px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+.col .info > div .top .time span {
+  font-size: 28px;
+}
+.col .info > div .top .title{
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 140%;
+  margin: 0 0 10px 0;
+}
+.col .info > div .top hr {
+  border: 1px solid #000;
+  margin-bottom: 10px;
+}
+.col .info > div .top .group{
+  font-size: 14px;
+  letter-spacing: 0.06em;
+  color: #000;
+  text-transform: uppercase;
+  margin-bottom: 18px;
+}
+.col .info > div .top .social {
+  margin: 16px 0;
+}
+.col .info > div .top .social ul li{
+  display: inline-block; 
+}
+.col .info > div .top .social ul li button {
+ display: inline-block;
+ color: #fff;
+ border: 0;
+ height: 30px;
+ width: 30px;
+ color: #fff;
+ border-radius: 4px;
+ font-size: 18px;
+ line-height: 0;
+ cursor: pointer;
+ margin-right: 2px;
+}
+.col .info > div .top .social ul li.what button{
+  background: green;
+}
+.col .info > div .top .social ul li.fb button{
+  background: blue;
+}
+.col .info > div .bottom > span {
+  font-size: 14px;
+  letter-spacing: 0.06em;
+  color: #000;
+  text-transform: uppercase;
+  display: block;
+  margin: 0 0 8px 0;
+}
+.col .info > div .bottom ul {
+  display: inline-flex;
+  justify-content: flex-start;
+}
+.col .info > div .bottom ul li {
+  background-color: #f0f0f0;
+  color:#555;
+  border-radius: 12px;
+  font-size: 14px;
+  padding: 8px 10px;
+  margin: 2px;
+}
+.col .info > div .bottom ul li img {
+  width: 100%;
+}
+
+
+.receta{
+/* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#f0f0f0+0,ffffff+100 */
+background: linear-gradient(to bottom,  #f0f0f0 0%,#ffffff 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+padding: 20px;
+}
+.receta h2 {
+  font-weight: 500;
+  font-size: 22px;
+  line-height: 140%;
+  color: #000;
+  margin-bottom: 20px;
+}
+.receta ul li {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 16px;
+}
+.receta ul li span {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #ffffff;
+  border: 2px solid #f0f0f0;
+  font-weight: 700;
+  color: #999;
+  border-radius: 50%;
+  font-size: 24px;
+  width: 40px;
+  height: 40px;
+}
+.receta ul li p {
+  width: calc(100% - 50px);
+  color: black;
+  font-size: 16px;
+  line-height: 140%;
+}
+.noreceta{
+  /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#f0f0f0+0,ffffff+100 */
+  background: linear-gradient(to bottom,  #f0f0f0 0%,#ffffff 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  padding: 20px;
+  text-align: center;
+  }
+.noreceta h2 {
+  font-weight: 500;
+  font-size: 22px;
+  line-height: 140%;
+  color: #000;
+  margin-bottom: 20px;
+}
+.noreceta img {
+  max-width: 380px;
+  margin: 0 auto;
+}
+@media screen and (min-width:640px){
+  .col .img {
+    width: 50%;
+    height: auto;
+    display: flex;
+    flex:1;
+    margin: 0;
+  }
+  .col .info {
+    width: 50%;
+    padding-left: 20px;
+    min-height: 340px;
+  }
+  .receta ul li span{
+    font-size: 40px;
+    width: 70px;
+    height: 70px;
+  }
+  .receta ul li p {
+    width: calc(100% - 90px);
+  }
+  .col .info > div .top .group{
+    margin-bottom: 0;
+  }
+
+}
+

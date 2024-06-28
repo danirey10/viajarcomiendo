@@ -1,0 +1,98 @@
+.userfav {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 6px;
+  background-color: #f5f5f5;
+  padding: 6px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  position: relative;
+}
+.userfav .img {
+  display: flex;
+  flex:1;
+  overflow: hidden;
+  border-radius: 8px;
+  position: relative;
+}
+.userfav .img img {
+  position: absolute;
+  object-fit: cover;
+  height: 100%;
+  width: 100%;
+}
+.userfav .info {
+  width: calc(100% - 200px);
+  padding: 14px;
+}
+.userfav .info h3{
+  font-weight: 700;
+  margin: 0 0 8px 0;
+}
+.userfav .info p {
+  font-size: 14px;
+  line-height: 120%;
+  max-height: 70px;
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 10px;
+}
+.userfav .info p:before{
+  content:"";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 20px;
+  /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#f5f5f5+0,f5f5f5+100&0+0,1+100 */
+  background: linear-gradient(to bottom,  rgba(245,245,245,0) 0%,rgba(245,245,245,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+}
+.userfav .info button{
+  background: green;
+  border: 0;
+  border-radius: 8px;
+  overflow: hidden;
+  padding: 6px 10px;
+  color:#fff;
+  font-size: 14px;
+  font-weight: 500;
+  height: 34px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  position: relative;
+}
+.userfav .info button:hover:before {
+  width: 100%;
+  background: rgba(0,0,0,0.4);
+  transition: all 0.3s;
+}
+.userfav .info button:before{
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0%;
+  height: 100%;
+  background: rgba(0,0,0,0.0);
+  transition: all 0.3s;
+}
+.userfav .info button i {
+  margin: 0 10px 0 0;
+}
+.userfav .info button div {
+  position: relative;
+}
+.userfav .trash{
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  width: 34px;
+  height: 34px;
+  background-color: #333;
+  border-radius: 4px;
+  color: #fff;
+  border: 1px solid #fff;
+  cursor: pointer;
+}

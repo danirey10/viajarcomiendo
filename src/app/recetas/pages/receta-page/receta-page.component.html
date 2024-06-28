@@ -1,0 +1,47 @@
+<div class="content">
+  <div class="col">
+    <div class="img">
+      <img src="{{ receta?.image }}" alt="{{ receta?.title }}"  (error)="onImageError($event)">
+    </div>
+    <div class="info">
+      <div>
+        <div class="top">
+          <p class="time">¡Hecho en <span>{{ receta?.readyInMinutes }}</span> minutos!</p>
+          <h1 class="title">{{ receta?.title }}</h1>
+          <hr>
+          <p class="group">Para {{ receta?.servings }} servicios</p>
+          <div class="social">
+            <ul>
+              <li class="what"><button (click)="shareWhats(receta!.id)" title="Compartir en whatsapp"><i class="fa-brands fa-whatsapp"></i></button></li>
+              <li class="fb"><button (click)="shareFb(receta!.id)" title="Compartir en facebook"><i class="fa-brands fa-facebook"></i></button></li>
+            </ul>
+          </div>
+        </div>
+        <div class="bottom">
+          <span>INGREDIENTES</span>
+          <ul *ngFor="let ingrediente of receta?.extendedIngredients">
+            <li><span>{{ ingrediente.name }}</span></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="receta" *ngIf="receta?.analyzedInstructions!.length > 0">
+    <h2>Pasos para hacer {{ receta?.title | lowercase }}</h2>
+    <ul *ngFor="let paso of receta?.analyzedInstructions">
+      <li *ngFor="let step of paso.steps">
+        <span>{{ step.number }}</span>
+        <p>{{ step.step }}</p>
+      </li>
+    </ul>
+  </div>
+
+  <div class="noreceta" *ngIf="receta?.analyzedInstructions!.length <= 0">
+    <h2>Nuestros cocineros están elaborando la receta de {{ receta?.title | lowercase }}</h2>
+
+    <img [src]="urlCocinero" alt="Cocinero con la receta">
+
+  </div>
+
+</div>

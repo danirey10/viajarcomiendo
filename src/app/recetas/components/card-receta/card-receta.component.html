@@ -1,0 +1,10 @@
+<div class="card">
+  <div class="img">
+    <img src="{{ result.image }}" alt="Imagen de la receta" (error)="onImageError($event)">
+  </div>
+  <p>{{ result.title }}</p>
+  <div class="checks">
+    <button (click)="goReceta(result.title,result.id)"><div><i class="fa-solid fa-utensils"></i> <span>Ver receta</span></div></button>
+    <button *ngIf="userActive()" [class.favorita]="favorita" (click)="addFavorite(result.id)"><div><i class="fa-solid fa-heart"></i></div></button>
+  </div>
+</div>

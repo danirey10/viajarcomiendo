@@ -1,0 +1,223 @@
+header * {
+  transition: all 0.3s;
+}
+header {
+  width: 100%;
+  padding: 10px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
+header.sticky {
+  background: rgba(0,0,0,.9);
+}
+header.sticky .logo {
+  max-width: 220px;
+}
+
+header > div {
+  max-width: 1360px;
+  width: 100%;
+  margin:0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+html:not([data-scroll='1']) header {
+  background: rgba(0,0,0,.8);
+}
+
+header .logo {
+  max-width: 220px;
+}
+header .logo img {
+  width: 100%;
+}
+
+header .nouser {
+  font-size: 14px;
+  font-style: italic;
+  color: #fff;
+  display: none;
+}
+header .nouser a {
+  color: #fff;
+}
+header .user {
+  display: flex;
+  align-items: center;
+  display: none;
+}
+header .user .img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+  height: 50px;
+  overflow: hidden;
+  border-radius: 50%;
+  border: 2px solid #fff;
+  position: relative;
+}
+header .user .img img {
+  position: absolute;
+  top:0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+header .user > div {
+  color: #fff;
+  padding-left: 10px;
+}
+header .user > div a:nth-child(1) {
+  font-weight: 700;
+  margin:0 0 10px 0;
+  text-decoration: none;
+  font-size: 18px;
+}
+header .user > div a {
+  color: #fff;
+  font-size: 14px;
+}
+header .user > div > div {
+  display: flex;
+ }
+header .user > div > div p i {
+  color: #fff;
+  margin-left: 10px;
+  cursor: pointer;
+}
+
+.overlay.open {
+  opacity: 1;
+  z-index: 1;
+  transition: all 0.4s;
+}
+.menubar.open {
+  left: 0;
+  z-index: 2;
+  transition: all 0.4s;
+}
+
+.overlay{
+  position: fixed;
+  top:0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,.5);
+  opacity: 0;
+  z-index: -1;
+  transition: all 0.4s;
+}
+.menubar {
+  position: fixed;
+  left: -290px;
+  width: 290px;
+  background-color:#1C1C1C;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+  padding-top: 30px;
+  transition: all 0.4s;
+}
+.menubar .nouser {
+  font-size: 14px;
+  font-style: italic;
+  color: #fff;
+}
+.menubar .nouser a {
+  color: #fff;
+}
+.menubar .user {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+.menubar .user .img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 80px;
+  height: 80px;
+  overflow: hidden;
+  border-radius: 50%;
+  border: 2px solid #fff;
+  position: relative;
+  margin: 0 0 10px 0;
+}
+.menubar .user .img img {
+  position: absolute;
+  top:0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.menubar .user > div {
+  color: #fff;
+}
+.menubar .user > div a:nth-child(1) {
+  font-weight: 700;
+  margin:0 0 10px 0;
+  text-decoration: none;
+  font-size: 22px;
+}
+.menubar .user > div a {
+  color: #fff;
+  font-size: 14px;
+}
+.menubar .user > div > div {
+  display: flex;
+  justify-content: center;
+ }
+.menubar .user > div > div p i {
+  color: #fff;
+  margin-left: 10px;
+  cursor: pointer;
+}
+.menubar .menu {
+  margin-top: 60px;
+  color: #fff;
+  width: 100%;
+  text-align: center;
+}
+.menubar .menu li {
+  width: 100%;
+  display: block;
+}
+.menubar .menu li a {
+  display: block;
+  background-color: #000;
+  margin-bottom: 2px;
+  color: #fff;
+  text-decoration: none;
+  font-size: 22px;
+  padding: 20px 12px;
+}
+.menubar .menu li a:hover{
+  background-color: #111;
+}
+
+@media screen and (min-width:640px){
+  hamburguer {display: none;}
+  header .user{
+    display: flex;
+  }
+  header .nouser{
+    display: block;
+  }
+  header .logo {
+    max-width: 320px;
+  }
+  header.sticky .logo {
+    max-width: 320px;
+  }
+}
